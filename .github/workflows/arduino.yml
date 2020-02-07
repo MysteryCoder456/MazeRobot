@@ -6,16 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-#     steps:
-#     - uses: actions/checkout@v2
-#     - name: Run a one-line script
-#       run: echo Hello, world!
-#     - name: Run a multi-line script
-#       run: |
-#         echo Add other actions to build,
-#         echo test, and deploy your project.
-        
+    
     steps:
       - name: Run arduino-builder
         uses: Legion2/arduino-builder-action@v2.0.0
@@ -23,7 +14,7 @@ jobs:
           # Path to a single sketch
           sketch: MazeRobot.ino
           # Directory in which to search for sketches
-          sketchDirectory: .
+          sketchDirectory: ../../
           # Fully Qualified Board Name
           board: arduino:avr:uno
           # Directory containing Arduino libraries.
