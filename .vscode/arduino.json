@@ -1,0 +1,4 @@
+{
+    "sketch": "MazeRobot.ino",
+    "board": "arduino:avr:uno"
+}
