@@ -1,12 +1,12 @@
-#include "sonicSensor.h"
+#include "SonicSensor.h"
 
 SonicSensor::SonicSensor(int trigPin, int echoPin)
 {
     trig = trigPin;
     echo = echoPin;
 
-    pinMode(trig, OUTPUT);
-    pinMode(echo, INPUT);
+    pinMode (trig, OUTPUT);
+    pinMode (echo, INPUT);
 }
 
 long SonicSensor::getDistance()

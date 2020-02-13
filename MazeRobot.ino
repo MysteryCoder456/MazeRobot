@@ -1,10 +1,14 @@
-#include "sonicSensor.h"
+#include "SonicSensor.h"
+#include "Car.h"
 
-SonicSensor frontSensor = SonicSensor(2, 3);
+SonicSensor leftSensor = SonicSensor(2, 3);
+SonicSensor frontSensor = SonicSensor(4, 5);
+SonicSensor rightSensor = SonicSensor(6, 7);
+
+Car robot = Car(12, 13, 11, 10);
 
 void setup()
 {
-    // put your setup code here, to run once:
     Serial.begin(9600);
     Serial.println("Started!");
 
@@ -13,16 +17,7 @@ void setup()
 
 void loop()
 {
-    // put your main code here, to run repeatedly:
-    long d = frontSensor.getDistance();
-    Serial.println(d);
-    
-    if (d < 10.0)
-    {
-        digitalWrite(13, HIGH);
-    }
-    else
-    {
-        digitalWrite(13, LOW);
-    }
+    Serial.print((String)leftSensor.getDistance() + " ");
+    Serial.print((String)frontSensor.getDistance() + " ");
+    Serial.println(rightSensor.getDistance());
 }
