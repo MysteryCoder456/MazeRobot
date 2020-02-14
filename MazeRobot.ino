@@ -17,6 +17,7 @@ void setup()
 
 void loop()
 {
+    delay(100);
     Serial.print((String)leftSensor.getDistance() + " ");
     Serial.print((String)frontSensor.getDistance() + " ");
     Serial.println(rightSensor.getDistance());
