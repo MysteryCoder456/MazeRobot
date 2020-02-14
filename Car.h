@@ -5,11 +5,15 @@
 class Car
 {
 public:
-    int motorLeftA;
-    int motorLeftB;
+    int motorLA; // Left Clockwise
+    int motorLB; // Left Counter-Clockwise
 
-    int motorRightA;
-    int motorRightB;
+    int motorRA; // Right Clockwise
+    int motorRB; // Right Counter-Clockwise
 
     Car(int LA, int LB, int RA, int RB);
+    void stopCar();
+    void moveForward();
+    void turnLeft();
+    void turnRight();
 };
