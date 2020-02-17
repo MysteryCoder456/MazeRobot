@@ -5,7 +5,7 @@ SonicSensor leftSensor = SonicSensor(2, 3);
 SonicSensor frontSensor = SonicSensor(4, 5);
 SonicSensor rightSensor = SonicSensor(6, 7);
 
-Car robot = Car(12, 13, 10, 11);
+Car robot = Car(12, 11, 9, 10);
 
 void setup()
 {
@@ -25,33 +25,35 @@ void loop()
     int moveDelay = 1000;
     int turnDelay = 500;
 
-    // Not Blocked Left
-    if (left >= sideThreshold)
-    {
-        robot.turnLeft();
-        delay(turnDelay);
+    robot.moveForward();
+
+    // // Not Blocked Left
+    // if (left >= sideThreshold)
+    // {
+    //     robot.turnLeft();
+    //     delay(turnDelay);
         
-        robot.moveForward();
-        delay(moveDelay);
-    }
-    // Not Blocked Right
-    else if (right >= sideThreshold)
-    {
-        robot.turnRight();
-        delay(turnDelay);
+    //     robot.moveForward();
+    //     delay(moveDelay);
+    // }
+    // // Not Blocked Right
+    // else if (right >= sideThreshold)
+    // {
+    //     robot.turnRight();
+    //     delay(turnDelay);
         
-        robot.moveForward();
-        delay(moveDelay);
-    }
-    // Not Blocked Front
-    else if (front >= frontThreshold)
-    {
-        robot.moveForward();
-    }
-    // Blocked Front, Left and Right
-    else if (front < frontThreshold && left < sideThreshold && right < sideThreshold)
-    {
-        robot.turnLeft():
-        delay(turnDelay * 2);
-    }
+    //     robot.moveForward();
+    //     delay(moveDelay);
+    // }
+    // // Not Blocked Front
+    // else if (front >= frontThreshold)
+    // {
+    //     robot.moveForward();
+    // }
+    // // Blocked Front, Left and Right
+    // else if (front < frontThreshold && left < sideThreshold && right < sideThreshold)
+    // {
+    //     robot.turnLeft():
+    //     delay(turnDelay * 2);
+    // }
 }

@@ -1,5 +1,5 @@
 {
     "sketch": "MazeRobot.ino",
     "board": "arduino:avr:uno",
-    "port": "/dev/cu.Bluetooth-Incoming-Port"
+    "port": "/dev/cu.usbserial-14310"
 }
