@@ -1,5 +1,5 @@
 {
     "sketch": "MazeRobot.ino",
     "board": "arduino:avr:uno",
-    "port": "/dev/cu.usbserial-14310"
+    "port": "/dev/cu.usbserial-1410"
 }

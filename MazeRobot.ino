@@ -19,15 +19,15 @@ void loop()
     long front = frontSensor.getDistance();
     long right = rightSensor.getDistance();
 
-    long frontThreshold = 10;
+    long frontThreshold = 15;
     long sideThreshold = 15;
 
     int moveDelay = 1000;
     int turnDelay = 500;
 
-    robot.moveForward();
+    digitalWrite(robot.motorRA, HIGH);
 
-    // // Not Blocked Left
+    // Not Blocked Left
     // if (left >= sideThreshold)
     // {
     //     robot.turnLeft();
@@ -46,14 +46,19 @@ void loop()
     //     delay(moveDelay);
     // }
     // // Not Blocked Front
-    // else if (front >= frontThreshold)
+    // if (front >= frontThreshold)
     // {
     //     robot.moveForward();
     // }
     // // Blocked Front, Left and Right
     // else if (front < frontThreshold && left < sideThreshold && right < sideThreshold)
     // {
-    //     robot.turnLeft():
+    //     robot.turnLeft();
     //     delay(turnDelay * 2);
+    // }
+    // // Any other case
+    // else
+    // {
+    //     robot.stopCar();
     // }
 }
