@@ -25,40 +25,38 @@ void loop()
     int moveDelay = 1000;
     int turnDelay = 500;
 
-    digitalWrite(robot.motorRA, HIGH);
-
-    // Not Blocked Left
-    // if (left >= sideThreshold)
-    // {
-    //     robot.turnLeft();
-    //     delay(turnDelay);
+    Not Blocked Left
+    if (left >= sideThreshold)
+    {
+        robot.turnLeft();
+        delay(turnDelay);
         
-    //     robot.moveForward();
-    //     delay(moveDelay);
-    // }
-    // // Not Blocked Right
-    // else if (right >= sideThreshold)
-    // {
-    //     robot.turnRight();
-    //     delay(turnDelay);
+        robot.moveForward();
+        delay(moveDelay);
+    }
+    // Not Blocked Right
+    else if (right >= sideThreshold)
+    {
+        robot.turnRight();
+        delay(turnDelay);
         
-    //     robot.moveForward();
-    //     delay(moveDelay);
-    // }
-    // // Not Blocked Front
-    // if (front >= frontThreshold)
-    // {
-    //     robot.moveForward();
-    // }
-    // // Blocked Front, Left and Right
-    // else if (front < frontThreshold && left < sideThreshold && right < sideThreshold)
-    // {
-    //     robot.turnLeft();
-    //     delay(turnDelay * 2);
-    // }
-    // // Any other case
-    // else
-    // {
-    //     robot.stopCar();
-    // }
+        robot.moveForward();
+        delay(moveDelay);
+    }
+    // Not Blocked Front
+    if (front >= frontThreshold)
+    {
+        robot.moveForward();
+    }
+    // Blocked Front, Left and Right
+    else if (front < frontThreshold && left < sideThreshold && right < sideThreshold)
+    {
+        robot.turnLeft();
+        delay(turnDelay * 2);
+    }
+    // Any other case
+    else
+    {
+        robot.stopCar();
+    }
 }
